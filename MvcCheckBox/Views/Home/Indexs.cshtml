@@ -1,0 +1,26 @@
+﻿@model MvcCheckBox.Models.Member
+@{
+    ViewBag.Title = "Indexs";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <h2>Indexs</h2>
+</head>
+<body>
+    <div>
+        @using (@Html.BeginForm("Submit", "Home", FormMethod.Post))
+        {
+        <div>
+            @Html.LabelFor(x => x.Name)
+            @Html.TextBoxFor(x=>x.Name)
+        </div>
+        <div>
+            @Html.CheckBoxFor(x => x.IsActive)
+            @Html.DisplayNameFor(x => x.IsActive)
+        </div>
+        <button type="submit">Submit</button>
+        }
+    </div>
+</body>
+</html>
